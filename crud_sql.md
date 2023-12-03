@@ -35,4 +35,37 @@ CRUD for Employee Management System
 
 	DELETE FROM Departments WHERE department_id = 1
 
+3.	Table: JobRoles
+•	Create: This query inserts a new job role into the JobRoles table with the specified values for role_id, role_title, responsibilities, and salary_grade.
+ 
+	INSERT INTO JobRoles (role_id, role_title, responsibilities, salary_grade) 
+	VALUES (1, 'Software Engineer', 'Develop and maintain software applications', '5')
+
+•	Read: To retrieve all job role records from the JobRoles table
+
+	SELECT * FROM JobRoles
+
+•	Update: To update a job role’s information in the JobRoles table
+	UPDATE JobRoles SET salary_grade = 6 WHERE role_id = 1
+
+•	Delete: To delete a job role record from the JobRoles table
+	DELETE FROM JobRoles WHERE role_id = 1
+
+4.	Table: EmployeeContacts
+•	Create: This query inserts a new contact into the EmployeeContacts table with the specified values for contact_id, employee_id, phone_number, and email.
+
+	INSERT INTO EmployeeContacts (contact_id, employee_id, phone_number, email)
+	VALUES (1, 101, ‘123-456-7890’, ‘example@example.com’)
+
+•	Read: To retrieve all contacts from the EmployeeContacts table.
+
+	SELECT * FROM EmployeeContacts
+
+•	Update: To update a contact's information in the EmployeeContacts table.
+
+	UPDATE EmployeeContacts SET phone_number = ‘987-654-3210’ WHERE contact_id = 1
+
+•	Delete: To delete a contact record from the EmployeeContacts table
+
+	DELETE FROM EmployeeContacts WHERE contact_id = 1;
 
