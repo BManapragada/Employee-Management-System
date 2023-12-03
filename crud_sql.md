@@ -1,6 +1,6 @@
 CRUD for Employee Management System
 
-1.	Table: Employees
+1	Table: Employees
 •	Create: This query inserts a new employee into the Employees table with the specified values for employee_id, employee_name, department_id, and 	salary
 	
  	INSERT INTO Employees (employee_id, employee_name, department_id, salary) VALUES (1, 'EMP1', 1, 50000.00)
@@ -17,7 +17,7 @@ CRUD for Employee Management System
 
 	DELETE FROM Employees WHERE employee_id = 1
 
-2.	Table: Departments
+2	Table: Departments
 •	Create: This query inserts a new row into the Departments table with specified values for department_id, department_name, manager_id, and location.
 
 	INSERT INTO Departments (department_id, department_name, manager_id, location)
@@ -35,7 +35,7 @@ CRUD for Employee Management System
 
 	DELETE FROM Departments WHERE department_id = 1
 
-3.	Table: JobRoles
+3	Table: JobRoles
 •	Create: This query inserts a new job role into the JobRoles table with the specified values for role_id, role_title, responsibilities, and salary_grade.
  
 	INSERT INTO JobRoles (role_id, role_title, responsibilities, salary_grade) 
@@ -51,7 +51,7 @@ CRUD for Employee Management System
 •	Delete: To delete a job role record from the JobRoles table
 	DELETE FROM JobRoles WHERE role_id = 1
 
-4.	Table: EmployeeContacts
+4	Table: EmployeeContacts
 •	Create: This query inserts a new contact into the EmployeeContacts table with the specified values for contact_id, employee_id, phone_number, and email.
 
 	INSERT INTO EmployeeContacts (contact_id, employee_id, phone_number, email)
