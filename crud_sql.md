@@ -1,10 +1,9 @@
 CRUD for Employee Management System
 
 1.	Table: Employees
-•	Create: This query inserts a new employee into the Employees table with the specified values for employee_id, employee_name, department_id, and salary
-
-  INSERT INTO Employees (employee_id, employee_name, department_id, salary)
-	VALUES (1, 'EMP1', 1, 50000.00)
+•	Create: This query inserts a new employee into the Employees table with the specified values for employee_id, employee_name, department_id, and 	salary
+	
+ 	INSERT INTO Employees (employee_id, employee_name, department_id, salary) VALUES (1, 'EMP1', 1, 50000.00)
 
 •	Read: To retrieve all employee records from the Employees table
 
