@@ -31,3 +31,37 @@ department_id	department_name	manager_id	location
 2	Finance	2	Chicago
 3	IT	3	KS
 
+
+
+Table 3: JobRoles (3NF)
+- Fields:
+  1. role_id (Primary Key)
+  2. role_title
+  3. responsibilities
+  4. salary_grade
+- Functional Dependencies (FDs): role_id → {role_title, responsibilities, salary_grade}
+- Foreign Key Policies: No specific policies needed in this case.
+Sample data:
+role_id	role_title	responsibilities	salary_grade
+1	HR Managed	Manage HR department	5
+2	Financial Analyst	Analyse financial data	4
+3	Software Developer	Develop software solutions	6
+
+
+
+Table 4: EmployeeContacts (3NF)
+- Fields:
+  1. contact_id (Primary Key)
+  2. employee_id (Foreign Key referencing Employees table)
+  3. phone_number
+  4. email
+- Functional Dependencies (FDs): - contact_id → {employee_id, phone_number, email}
+- Foreign Key Policies: ON DELETE CASCADE (If an employee is removed, remove the related contact details as well).
+Sample data:
+contact_id	employee_id	phone_number	email
+1	1	123-456-7890	john@example.com
+2	2	987-654-3210	jane@example.com
+3	3	111-222-3333	alex@example.com
+
+Note: All the tables are Third Normal Form (3NF) as they don’t have any transitive dependencies, and all columns seem to depend only on the primary key of each table.
+
