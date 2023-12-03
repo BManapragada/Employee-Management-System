@@ -1,39 +1,37 @@
-CRUD for Employee Management System
+Employee Management Systems Insert statements
 
-1.	Table: Employees
-•	Create: This query inserts a new employee into the Employees table with the specified values for employee_id, employee_name, department_id, and salary.
-	
- 	INSERT INTO Employees (employee_id, employee_name, department_id, salary)
-	VALUES (1, 'EMP1', 1, 50000.00)
-
-•	Read: To retrieve all employee records from the Employees table.
-	
- 	SELECT * FROM Employees
-
-•	Update: To update an employee's information in the Employees table
-	
- 	UPDATE Employees SET salary = 55000.00 WHERE employee_id = 1
-
-•	Delete: To delete an employee record from the Employees table
-	
- 	DELETE FROM Employees WHERE employee_id = 1
-
-2.	Table: Departments
+1	Employees:
    
-•	Create: This query inserts a new row into the Departments table with specified values for department_id, department_name, manager_id, and location. 
+	CREATE TABLE Employees (
+		employee_id INT PRIMARY KEY,
+		employee_name VARCHAR(100),
+		department_id INT,
+		salary DECIMAL(12, 2),
+	FOREIGN KEY (department_id) REFERENCES Departments(department_id) ON DELETE SET NULL );
 
-	INSERT INTO Departments (department_id, department_name, manager_id, location)
-	VALUES (1, ‘Sales’, 101, ‘New York’)
+2	Departments:
+   
+	CREATE TABLE Departments (
+		department_id INT PRIMARY KEY,
+		department_name VARCHAR(100),
+		manager_id INT,
+		location VARCHAR(100),
+	FOREIGN KEY (manager_id) REFERENCES Employees(employee_id) ON DELETE SET NULL);
 
-•	Read: To retrieve all department records from the Departments table
+3	JobRoles:
 
-	SELECT * FROM Departments
+	CREATE TABLE JobRoles (
+		role_id INT PRIMARY KEY,
+		role_title VARCHAR(100),
+		responsibilities TEXT,
+		salary_grade INT
+	);
 
-•	Update: To update a department's information in the Departments table
+4	EmployeeContacts:
 
-	UPDATE Departments SET location = 'Los Angeles' WHERE department_id = 1
-
-•	Delete: To delete a department record from the Departments table
-
-	DELETE FROM Departments WHERE department_id = 1
-
+	CREATE TABLE EmployeeContacts (
+		contact_id INT PRIMARY KEY,
+		employee_id INT,
+		 phone_number VARCHAR(20),
+		email VARCHAR(100),
+	FOREIGN KEY (employee_id) REFERENCES Employees(employee_id) ON DELETE CASCADE);
