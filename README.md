@@ -12,3 +12,6 @@ Manikanta Jarugula(P298G688)->	[manijarugula](https://github.com/manijarugula)
 Project Link: https://github.com/BManapragada/CS665F23_Group2 
 
 Video: https://youtu.be/3SAo3PBql7c 
+
+
+PS: To run the project, do change the connectionstring in the code so that it will connect to the required database.
