@@ -46,9 +46,11 @@ CRUD for Employee Management System
 	SELECT * FROM JobRoles
 
 •	Update: To update a job role’s information in the JobRoles table
+
 	UPDATE JobRoles SET salary_grade = 6 WHERE role_id = 1
 
 •	Delete: To delete a job role record from the JobRoles table
+
 	DELETE FROM JobRoles WHERE role_id = 1
 
 4	Table: EmployeeContacts
