@@ -5,8 +5,6 @@ Git Hub:
 
 Bharath Kumar Manapragada(B464D758)->	[BManapragada](https://github.com/BManapragada)
 
-Project Link: https://github.com/BManapragada/CS665F23_Group2 
-
 Video: https://youtu.be/3SAo3PBql7c 
 
 The following is the screenshot of the application.
